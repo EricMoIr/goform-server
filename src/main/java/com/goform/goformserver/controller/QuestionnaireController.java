@@ -17,6 +17,10 @@ public class QuestionnaireController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<QuestionnaireDTO> getQuestionnaire(@PathVariable String id) {
-        return ResponseEntity.ok(questionnaireService.getQuestionnaire(id));
+        QuestionnaireDTO dto = questionnaireService.getQuestionnaire(id);
+        if (dto == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(dto);
     }
 }
