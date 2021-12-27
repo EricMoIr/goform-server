@@ -37,7 +37,7 @@ java -jar target/goform-server-1.0.0.jar
 
 ## Environment variables
 
-All environment variables can be configured within the .env file
+All environment variables can be configured within the src/main/resources/application.properties file
 
 | Variable                                   | Description                                  | Default Value                   |
 | ------------------------------------------ | -------------------------------------------- | ------------------------------- |
